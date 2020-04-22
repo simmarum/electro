@@ -1,3 +1,5 @@
+import urllib.parse
+
 from django.db import models
 
 from modelcluster.fields import ParentalKey
@@ -48,7 +50,10 @@ class Product(Page):
                 fields.append(f)
 
         context['custom_fields'] = fields
-
+        context['relative_url'] = urllib.parse.urlparse(
+            self.get_full_url()).path
+        print(self.get_full_url())
+        print(context['relative_url'])
         return context
 
 

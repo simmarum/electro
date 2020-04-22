@@ -38,7 +38,7 @@
             </p>
 
             <button class="snipcart-add-item btn btn-primary" data-item-name="{{ page.title }}"
-                data-item-id="{{ page.sku }}" data-item-url="{{ page.get_full_url }}" data-item-price="{{ page.price }}"
+                data-item-id="{{ page.sku }}" data-item-url="{{ relative_url }}" data-item-price="{{ page.price }}"
                 data-item-description="{{ page.short_description}}" data-item-image="{{ temp_image.url }}"
                 {% for f in custom_fields %} data-item-custom{{forloop.counter}}-name="{{f.name}}"
                 data-item-custom{{forloop.counter}}-options="{{f.options}}" {% endfor %}>
