@@ -5,6 +5,7 @@ from modelcluster.fields import ParentalKey
 from wagtail.core.models import Page, Orderable
 from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel, InlinePanel
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.contrib.settings.models import BaseSetting, register_setting
 
 
 class HomePage(Page):
@@ -42,3 +43,11 @@ class ProductCustomField(Orderable):
         FieldPanel('name'),
         FieldPanel('options')
     ]
+
+
+@register_setting
+class SnipcartSettings(BaseSetting):
+    api_key = models.CharField(
+        max_length=255,
+        help_text='Your Snipcart public API key'
+    )
