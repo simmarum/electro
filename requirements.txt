@@ -14,7 +14,7 @@ idna==2.9
 l18n==2018.5
 Pillow==6.2.2
 pipdeptree==0.13.2
-protobuf==3.11.3
+protobuf==3.18.3
 pytz==2019.3
 requests==2.23.0
 six==1.14.0
